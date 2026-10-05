@@ -1,0 +1,58 @@
+name: Bug report
+description: Report a defect in vkc (template fields mirror the maintainer's bug report standard)
+labels: ["bug"]
+body:
+  - type: input
+    id: issue-reference
+    attributes:
+      label: Related issue or context
+      description: Link to a related issue, discussion, or spec reference if one exists.
+    validations:
+      required: false
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: |
+        - vkc version (`vkc version`)
+        - OS and architecture
+        - Vikunja server version and whether it is self-hosted or a hosted instance
+      validations:
+        required: true
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Reproduction steps
+      description: Exact commands and inputs, starting from a clean state.
+      placeholder: |
+        1. vkc login --server https://…
+        2. vkc task list
+    validations:
+      required: true
+  - type: textarea
+    id: expected-result
+    attributes:
+      label: Expected result
+      validations:
+        required: true
+  - type: textarea
+    id: actual-result
+    attributes:
+      label: Actual result
+      description: Include the full command output, including exit code.
+      validations:
+        required: true
+  - type: textarea
+    id: workarounds
+    attributes:
+      label: Workarounds
+      description: Did a different command, flag, or `vkc raw …` invocation succeed?
+      validations:
+        required: false
+  - type: textarea
+    id: recommendation
+    attributes:
+      label: Recommendation
+      description: If you have a hypothesis about the cause or a suggested fix, describe it here.
+      validations:
+        required: false

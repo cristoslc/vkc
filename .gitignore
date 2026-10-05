@@ -1,0 +1,35 @@
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+vendor/
+/dist/
+/bin/
+
+# Coverage
+coverage.txt
+*.cover
+
+# Editors / OS
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Worktrees
+.worktrees/*
+!.worktrees/.gitkeep
+
+# Local env & secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Spec cache (runtime artifact)
+.cache/
